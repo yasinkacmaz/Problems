@@ -23,3 +23,13 @@ fun <T : Any> joinToString(head: Node<T>): String {
     }
     return stringBuilder.toString()
 }
+
+fun <T : Any> moveToItem(head: Node<out T>, itemIndex: Int): Node<out T> {
+    var iteratingHead = head
+    repeat(itemIndex) {
+        iteratingHead = requireNotNull(iteratingHead.next) {
+            "Linked list size is lower than item place : $itemIndex"
+        }
+    }
+    return iteratingHead
+}

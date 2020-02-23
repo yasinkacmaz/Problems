@@ -1,5 +1,11 @@
-package cracking
+package cracking.linkedlist
 
+import cracking.Node
+import cracking.initLinkedList
+import cracking.joinToString
+
+// 2.1 Remove Dups! Write code to remove duplicates from an unsorted linked list
+// How would you solve this problem if a temporary buffer is not allowed?
 fun main() {
     val nodeValues = arrayListOf(1, 5, 3, 2, 6, 7, 8, 3, 2)
     val head = initLinkedList(nodeValues)
