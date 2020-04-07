@@ -5,3 +5,5 @@ class Node<T : Any> {
 
     var next: Node<T>? = null
 }
+
+val Node<*>.hasNext get() = next != null

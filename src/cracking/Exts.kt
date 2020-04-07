@@ -1,6 +1,6 @@
 package cracking
 
-fun <T : Any> initLinkedList(iterable: Iterable<T>): Node<T> {
+fun <T : Any> initLinkedList(iterable: Collection<T>): Node<T> {
     val head = Node<T>()
     var iteratingHead = head
     for ((index, item) in iterable.withIndex()) {
@@ -21,14 +21,14 @@ fun <T : Any> joinToString(head: Node<T>): String {
         stringBuilder.append(iteratingHead.value).append(" ")
         iteratingHead = iteratingHead.next ?: break
     }
-    return stringBuilder.toString()
+    return stringBuilder.toString().trim()
 }
 
-fun <T : Any> moveToItem(head: Node<out T>, itemIndex: Int): Node<out T> {
+fun <T : Any> moveToNode(head: Node<T>, nodeIndex: Int): Node<T> {
     var iteratingHead = head
-    repeat(itemIndex) {
+    repeat(nodeIndex) {
         iteratingHead = requireNotNull(iteratingHead.next) {
-            "Linked list size is lower than item place : $itemIndex"
+            "Linked list size is lower than node place : $nodeIndex"
         }
     }
     return iteratingHead
