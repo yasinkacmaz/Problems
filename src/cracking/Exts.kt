@@ -18,7 +18,7 @@ fun <T : Any> joinToString(head: Node<T>): String {
     val stringBuilder = StringBuilder()
     var iteratingHead = head
     while (true) {
-        stringBuilder.append(iteratingHead.value).append(" ")
+        iteratingHead.value?.let { value -> stringBuilder.append("$value ") }
         iteratingHead = iteratingHead.next ?: break
     }
     return stringBuilder.toString().trim()

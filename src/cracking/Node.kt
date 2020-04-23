@@ -1,9 +1,11 @@
 package cracking
 
 class Node<T : Any> {
-    lateinit var value: T
+    var value: T? = null
 
     var next: Node<T>? = null
-}
 
-val Node<*>.hasNext get() = next != null
+    companion object {
+        fun <T : Any> create(value: T) = Node<T>().apply { this.value = value }
+    }
+}

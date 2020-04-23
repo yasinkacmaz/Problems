@@ -25,7 +25,7 @@ fun removeDuplicateNodes(head: Node<Int>) {
 
         while (true) {
             if (nextNode?.value == currentValue) {
-                previousNode?.next = nextNode.next
+                previousNode?.next = nextNode?.next
             } else {
                 previousNode = nextNode
             }
