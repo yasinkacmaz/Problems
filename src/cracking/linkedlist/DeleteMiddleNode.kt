@@ -16,7 +16,7 @@ fun main() {
     removeMiddleNode(nodeToRemove)
 
     val result = joinToString(head)
-    print("yaso result: $result")
+    print("Result: $result")
 }
 
 private fun removeMiddleNode(nodeToRemove: Node<Char>) {

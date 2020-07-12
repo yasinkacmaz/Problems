@@ -14,11 +14,11 @@ fun <T : Any> initLinkedList(iterable: Collection<T>): Node<T> {
     return head
 }
 
-fun <T : Any> joinToString(head: Node<T>): String {
+fun <T : Any> joinToString(head: Node<T>, separator: String = " "): String {
     val stringBuilder = StringBuilder()
     var iteratingHead = head
     while (true) {
-        iteratingHead.value?.let { value -> stringBuilder.append("$value ") }
+        iteratingHead.value?.let { value -> stringBuilder.append("$value$separator") }
         iteratingHead = iteratingHead.next ?: break
     }
     return stringBuilder.toString().trim()

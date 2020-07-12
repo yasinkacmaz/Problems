@@ -14,5 +14,5 @@ fun main() {
         movedHead = movedHead.next ?: break
         head = head.next ?: break
     }
-    print("yaso result: ${head.value}") // k
+    print("Result: ${head.value}") // k
 }

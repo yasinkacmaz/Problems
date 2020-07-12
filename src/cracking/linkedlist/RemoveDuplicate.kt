@@ -11,7 +11,7 @@ fun main() {
     val head = initLinkedList(nodeValues)
     removeDuplicateNodes(head)
     val result = joinToString(head)
-    print("yaso result = $result")
+    print("Result = $result")
 }
 
 // Iterate through remaining nodes and remove matched nodes

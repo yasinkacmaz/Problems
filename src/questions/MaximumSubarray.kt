@@ -14,7 +14,7 @@ fun main() {
         return overallMax
     }
     val result = maxSubArray(array)
-    print("Yasin: $result")
+    print("Result: $result")
 
 
 }

@@ -13,7 +13,7 @@ fun main() {
     val head = initLinkedList(nodeValues)
     val lowerHead = partition(head, 5)
     val result = joinToString(lowerHead!!)
-    print("yaso result : $result")
+    print("Result : $result")
 }
 
 private fun partition(head: Node<Int>?, partitionValue: Int): Node<Int>? {
