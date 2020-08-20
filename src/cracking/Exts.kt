@@ -14,6 +14,16 @@ fun <T : Any> initLinkedList(iterable: Collection<T>): Node<T> {
     return head
 }
 
+fun <T : Any> length(head: Node<T>): Int {
+    var size = 1
+    var iteratingHead = head
+    while (iteratingHead.next != null) {
+        size++
+        iteratingHead = iteratingHead.next!!
+    }
+    return size
+}
+
 fun <T : Any> joinToString(head: Node<T>, separator: String = " "): String {
     val stringBuilder = StringBuilder()
     var iteratingHead = head
